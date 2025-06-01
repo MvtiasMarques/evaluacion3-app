@@ -1,0 +1,71 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Lana Natural Merino",
+      "description": "Lana de oveja Merino 100% natural, suave y cálida, ideal para prendas delicadas.",
+      "price": 8500,
+      "imageUrl": "https://via.placeholder.com/600x400/A9A9A9/FFFFFF?Text=Lana+Merino",
+      "altText": "Ovillo de lana Merino natural"
+    },
+    {
+      "id": 2,
+      "name": "Vellón de Alpaca",
+      "description": "Vellón peinado de alpaca, perfecto para hilado artesanal y fieltro.",
+      "price": 12000,
+      "imageUrl": "https://via.placeholder.com/600x400/D2B48C/FFFFFF?Text=Vellón+Alpaca",
+      "altText": "Vellón de alpaca en tonos tierra"
+    },
+    {
+      "id": 3,
+      "name": "Algodón Pima Peruano",
+      "description": "Algodón Pima de alta calidad, conocido por su suavidad y durabilidad.",
+      "price": 7000,
+      "imageUrl": "https://via.placeholder.com/600x400/F5F5DC/000000?Text=Algodón+Pima",
+      "altText": "Madeja de algodón Pima peruano"
+    }
+  ],
+  "services": [
+    {
+      "id": "taller-crochet-principiantes",
+      "title": "Taller de Crochet para Principiantes",
+      "description": "Aprende los puntos básicos del crochet y crea tu primer amigurumi. Incluye materiales.",
+      "imageUrl": "https://via.placeholder.com/300x200/ADD8E6/000000?Text=Taller+Crochet",
+      "productName": "Taller Crochet Principiantes"
+    },
+    {
+      "id": "taller-tejido-dos-agujas",
+      "title": "Taller de Tejido a Dos Agujas",
+      "description": "Descubre el mundo del tejido a dos agujas, desde montar puntos hasta crear texturas.",
+      "imageUrl": "https://via.placeholder.com/300x200/FFDAB9/000000?Text=Taller+Dos+Agujas",
+      "productName": "Taller Tejido Dos Agujas"
+    }
+  ],
+  "aboutUs": {
+    "title": "Sobre Tejelanas Vivi",
+    "content": "Tejelanas Vivi nació de la pasión por el tejido y las fibras naturales. Nos dedicamos a la venta de insumos de alta calidad como lanas naturales y vellón. Además, organizamos talleres de crochet y tejido en nuestro espacio en Laguna de Zapallar, fomentando una comunidad creativa y el aprendizaje de estas hermosas técnicas. Realizamos despachos a Santiago y regiones de Chile.",
+    "imageUrl": "https://via.placeholder.com/400x300/F0E68C/000000?Text=Tejelanas+Vivi+Tienda"
+  },
+  "faq": [
+    {
+      "id": "faq1",
+      "question": "¿Qué tipos de lanas ofrecen?",
+      "answer": "Nos especializamos en lanas naturales, incluyendo Merino, Alpaca, y Algodón Pima. También ofrecemos vellón para hilado y fieltro."
+    },
+    {
+      "id": "faq2",
+      "question": "¿Cómo puedo inscribirme en un taller?",
+      "answer": "Puedes contactarnos a través de nuestro Instagram @teje_lanas.vivi o mediante el formulario de contacto en esta página web para consultar por cupos y fechas."
+    },
+    {
+      "id": "faq3",
+      "question": "¿Realizan envíos a todo Chile?",
+      "answer": "Sí, realizamos despachos a Santiago y a todas las regiones de Chile a través de Starken y Chilexpress."
+    },
+    {
+      "id": "faq4",
+      "question": "¿Dónde están ubicados los talleres?",
+      "answer": "Nuestros talleres se realizan en TEJELANAS, nuestro espacio ubicado en Laguna de Zapallar."
+    }
+  ]
+}
