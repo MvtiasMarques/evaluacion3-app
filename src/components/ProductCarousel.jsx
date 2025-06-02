@@ -1,66 +1,37 @@
 import React, { useState, useEffect } from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
-const ProductCarousel = ({ images }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+// Importa las imágenes directamente
+import logo from '../../public/images/products/Logo.webp';
+import img1 from '../../public/images/products/Imagen 1.jpg';
+import img2 from '../../public/images/products/Imagen 2.jpg';
+import img3 from '../../public/images/products/Imagen 3.jpg';
+import img4 from '../../public/images/products/Imagen 4.jpg';
+import img5 from '../../public/images/products/Imagen 5.jpg';
+import img6 from '../../public/images/products/Imagen 6.jpg';
 
-  if (!images || images.length === 0) {
-    return <p>No hay imágenes para mostrar.</p>;
-  }
+const ProductCarousel = () => {
+    const images = [
+        { src: logo, alt: 'Perfecto para el invierno' },
+        { src: img1, alt: 'Excelente calidad' },
+        { src: img2, alt: 'Bordados a mano' },
+        { src: img3, alt: 'Compromiso con el medio ambiente' },
+        { src: img4, alt: 'Fabricacion nacional' },
+        { src: img5, alt: 'Acabados premium' },
+        { src: img6, alt: 'Telas de primer nivel' },
+    ];
 
-  const goToPrevious = () => {
-    const isFirstImage = currentIndex === 0;
-    const newIndex = isFirstImage ? images.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const goToNext = () => {
-    const isLastImage = currentIndex === images.length - 1;
-    const newIndex = isLastImage ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
-  };
-
-  // Efecto para cambiar automáticamente de slide (opcional)
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      goToNext();
-    }, 5000); // Cambia cada 5 segundos
-    return () => clearTimeout(timer); // Limpia el timer si el componente se desmonta o actualiza
-  }, [currentIndex, images.length]); // Se ejecuta cuando currentIndex o images.length cambian
-
-  return (
-    <div className="product-carousel" aria-roledescription="carousel">
-      <button onClick={goToPrevious} className="carousel-button prev" aria-label="Imagen anterior">
-        &#10094;
-      </button>
-      <div className="carousel-image-container" aria-live="polite">
-        <img 
-          key={currentIndex} // Ayuda a React a identificar cambios para animaciones/transiciones
-          src={images[currentIndex].src}
-          alt={images[currentIndex].alt}
-          className="carousel-image"
-          loading="lazy" // Añadido lazy loading
-        />
-      </div>
-      <button onClick={goToNext} className="carousel-button next" aria-label="Siguiente imagen">
-        &#10095;
-      </button>
-      <div className="carousel-dots">
-        {images.map((_, slideIndex) => (
-          <button
-            key={slideIndex}
-            onClick={() => goToSlide(slideIndex)}
-            className={`carousel-dot ${currentIndex === slideIndex ? 'active' : ''}`}
-            aria-label={`Ir a la imagen ${slideIndex + 1}`}
-            aria-current={currentIndex === slideIndex}
-          />
-        ))}
-      </div>
-    </div>
-  );
+    return (
+        <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false} dynamicHeight>
+            {images.map((image, index) => (
+                <div key={index}>
+                    <img src={image.src} alt={image.alt} style={{ maxHeight: '500px', objectFit: 'cover' }} />
+                    <p className="legend">{image.alt}</p>
+                </div>
+            ))}
+        </Carousel>
+    );
 };
 
 export default ProductCarousel;

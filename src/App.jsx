@@ -278,7 +278,7 @@ function App() {
 
       {/* Sección Productos Destacados con Carrusel */}
       <section id="productos-section" style={{ paddingTop: '56px', margin: '40px 0' }}>
-        <h2 style={{ textAlign: 'center' }}>Productos Destacados</h2>
+        <h2 style={{ textAlign: 'center' }}>Galeria de Imagenes</h2>
         {productsForCarousel.length > 0 ? (
           <ProductCarousel images={productsForCarousel} />
         ) : (
